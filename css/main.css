@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:500,700,800,900');
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+}
+
+main {
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  bottom:0;
+  left:0;
+  right:0;
+  font-family: 'Heebo', sans-serif;
+  font-size: 2em;
+  padding: 1em 1em 0.25em;
+  line-height: 1.3em;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+
+}
+
+
+
+#quoteContainer {
+  max-width: 880px;
+}
+#quoteAuthor {
+  font-size:.5em;
+}
+
+
+  #controls {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  #getQuoteButton,
+  #tweet,
+  #wiki {
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #getQuoteButton {
+    background-image: url(../img/newquote.svg);
+    width:93px;
+    height:83px;
+  }
+
+  #tweet {
+    order: -1;
+    background-image: url(../img/twitter.svg);
+    width:36px;
+    height:30px;
+  }
+
+  #wiki {
+    background-image: url(../img/wiki.svg);
+    width: 44px;
+    height:30px;
+  }
+
+  #getQuoteButton span,
+  #tweet span,
+  #wiki span{
+    display:none;
+    visibility:hidden;
+    font-size:0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (min-width: 1024px) {
+
+    body {
+      font-size: 2.5em;
+    }
+
+    #quoteContainer {
+
+      max-width: 1200px;
+    }
+  }
+
+
+
+
+
+
+
+
+  #getQuoteButton {
+    display:inline-block;
+  }
+
+a:visited {
+
+}
+
+
+a:hover,
+a:focus,
+a:active {
+  animation-duration: 3s;
+  animation-name: spin;
+  animation-iteration-count: 1;
+  /* animation-direction: alternate; */
+}
+
+
+
+
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
